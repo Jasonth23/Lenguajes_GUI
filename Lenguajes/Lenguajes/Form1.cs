@@ -31,22 +31,8 @@ namespace Lenguajes
 
         private void BtnActualizarLimit_Click(object sender, EventArgs e)
         {
-            ora.Open();
-            try
-            {
-                OracleCommand actualiza = new OracleCommand("modi_limite", ora);
-                actualiza.CommandType = System.Data.CommandType.StoredProcedure;
-                actualiza.Parameters.Add("id_tipo", OracleType.Number).Value = Convert.ToInt32(tbId_tipo.Text);
-                actualiza.Parameters.Add("cambio_limit", OracleType.Float).Value = Convert.ToDouble(tbLimite_new.Text);
-                actualiza.ExecuteNonQuery();
-
-                MessageBox.Show("listo");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("error");
-            }
-            ora.Close();
+            tipoCuenta tipo = new tipoCuenta();
+            tipo.Show();
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
