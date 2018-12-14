@@ -40,5 +40,11 @@ namespace Lenguajes
             modificar_usuario usuario_mod = new modificar_usuario();
             usuario_mod.Show();
         }
+
+        private void BtnEstado_Click(object sender, EventArgs e)
+        {
+            EstadoCuenta estado = new EstadoCuenta();
+            estado.Show();
+        }
     }
 }

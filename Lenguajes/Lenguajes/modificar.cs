@@ -34,7 +34,27 @@ namespace Lenguajes
             MessageBox.Show("listo");
             ora.Close();
             }
-      
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            try { 
+            ora.Open();
+            OracleCommand insertar = new OracleCommand("insertar_cli", ora);
+            insertar.CommandType = System.Data.CommandType.StoredProcedure;
+            insertar.Parameters.Add("cedula", OracleType.Number).Value = Convert.ToInt32(tbId.Text);
+            insertar.Parameters.Add("nombre", OracleType.VarChar).Value = tbNombre.Text;
+            insertar.Parameters.Add("apellidos", OracleType.VarChar).Value = tbApellido.Text;
+
+            insertar.ExecuteNonQuery();
+            MessageBox.Show("Cliente agregado");
+            
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error");
+            }
+            ora.Close();
         }
+    }
     }
 

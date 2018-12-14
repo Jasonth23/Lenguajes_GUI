@@ -31,6 +31,7 @@
             this.BtnConectar = new System.Windows.Forms.Button();
             this.BtnActualizarLimit = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
+            this.BtnEstado = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnConectar
@@ -63,11 +64,22 @@
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
+            // BtnEstado
+            // 
+            this.BtnEstado.Location = new System.Drawing.Point(377, 350);
+            this.BtnEstado.Name = "BtnEstado";
+            this.BtnEstado.Size = new System.Drawing.Size(75, 23);
+            this.BtnEstado.TabIndex = 8;
+            this.BtnEstado.Text = "Estado de cuenta";
+            this.BtnEstado.UseVisualStyleBackColor = true;
+            this.BtnEstado.Click += new System.EventHandler(this.BtnEstado_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnEstado);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.BtnActualizarLimit);
             this.Controls.Add(this.BtnConectar);
@@ -82,6 +94,7 @@
         private System.Windows.Forms.Button BtnConectar;
         private System.Windows.Forms.Button BtnActualizarLimit;
         private System.Windows.Forms.Button btnCliente;
+        private System.Windows.Forms.Button BtnEstado;
     }
 }
 
